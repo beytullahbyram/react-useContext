@@ -1,11 +1,8 @@
-import { createContext } from "react";
-import { IUser } from "../App";
+import React from "react";
 
-interface IContext {
-    changeColor?: (id: number, color: string) => void;
-    users: IUser[]
-}
 
-export const UserContext = createContext<IContext>({
-    users: []
-});
+// store the state here
+export const ContextData = React.createContext({ isNavExpanded: false });
+// store the open/close functions here
+export const ContextApi = React.createContext({ open: () => { }, close: () => { } });
+
